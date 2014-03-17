@@ -1,5 +1,6 @@
 $unknown = "=======";
 1;
+$currDefault="2014m";
 
 sub find_winners {
 	my @input = split/\./,$_[0];
@@ -85,7 +86,7 @@ sub get_losers {
 }
 
 sub get_perfect_code {
-	my $tourney = $q->param('t') || "2013m";
+	my $tourney = $q->param('t') || "2014m";
 	my @ret = read_winners("$tourney/actual");
 	my @actual = @{$ret[0]};
 	my @code;

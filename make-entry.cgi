@@ -7,7 +7,7 @@ $q = new CGI;
 print "Content-type: text/html\n\n";
 $|=1;
 
-my $tourney = $q->param('t') || "2013m";
+my $tourney = $q->param('t') || $currYear;
 my $code = $q->param('c') || "0.0.0.0.0.0.0.0";
 
 my $expired = 0;
