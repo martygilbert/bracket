@@ -1,6 +1,7 @@
 $unknown = "=======";
 1;
 $currDefault="2014m";
+$myEmail="martygilbert\@gmail.com";
 
 sub find_winners {
 	my @input = split/\./,$_[0];

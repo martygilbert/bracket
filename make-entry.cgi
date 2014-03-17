@@ -11,7 +11,6 @@ my $tourney = $q->param('t') || $currYear;
 my $code = $q->param('c') || "0.0.0.0.0.0.0.0";
 
 my $expired = 0;
-
 if(!before_deadline($tourney)){
     $expired = 1;
 }
@@ -62,7 +61,7 @@ function pick(evt,number) {
 print qq#
 
 Welcome to the new bracket entry page!  If it doesn't work for you, send
-<a href="mailto:dukepiki\@gmail.com">me</a> an email and use <a
+<a href="mailto:$myEmail">me</a> an email and use <a
 href="old-make-entry.cgi">the old page</a> instead.
 <br>
 <div style="visibility: visible; display: none;" id="dek"></div>
