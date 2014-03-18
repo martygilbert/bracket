@@ -269,7 +269,7 @@ if(!$expired){
 print qq(
 <p>
 <a id="saveit" href="make-entry.cgi?t=$tourney&c=$code">Save</a> this page -
-<br />then bookmark it and finish it later</center></td>
+<br />bookmark it and finish later</center></td>
 );
 }
 
