@@ -13,8 +13,8 @@ $q = new CGI;
 print "Content-type: application/postscript\n\n";
 
 
-my $tourney = $q->param('t') || "2008c";
-my $title = make_title($tourney);;
+my $tourney = $q->param('t') || $currDefault;
+my $title = make_title($tourney);
 setup("$tourney/teams");
 if ($q->param('actual')) {
 	my @ret = read_winners("$tourney/actual");

@@ -72,14 +72,14 @@ print qq(
 );
 $|=1;
 system("./html-new.pl $tourney actual");
-print qq(
 
-  <center>
-	<p><table cellpadding=0 cellspacing=0>
-  <tr><td align="center"><a href="tv.cgi?t=$tourney">TV schedule</a></td></tr>
-  <tr><td align="center" id="schedule_target">&nbsp;</td></tr>
-  </table>
-  </center>
+  #<center>
+	#<p><table cellpadding=0 cellspacing=0>
+  #<tr><td align="center"><a href="tv.cgi?t=$tourney">TV schedule</a></td></tr>
+  #<tr><td align="center" id="schedule_target">&nbsp;</td></tr>
+  #</table>
+  #</center>
+print qq(
 
 <script TYPE="text/javascript">
 <!--
@@ -97,8 +97,7 @@ function kill(tcell,color){
 </SCRIPT>
 
 <p><hr><p>
-Click on a column name to sort.  Click on 'HTML' or 'Postscript' to
-view someone's bracket.
+Click on a column name to sort.  
 <p>
 Entries shown in <font color="#ff2020">red</font> have been
 mathematically eliminated.  Click <a
@@ -140,9 +139,9 @@ foreach $name (@k) {
 		</tr>
 	);
 }
+#Actual bracket so far: <a href="code-to-ps.cgi?t=$tourney&actual=1">Postscript</a><br>
 print qq(
 	</table>\n<p>
-	Actual bracket so far: <a href="code-to-ps.cgi?t=$tourney&actual=1">Postscript</a><br>
 	Who's <a href="whosleft.cgi?t=$tourney">left</a>?<br>
 	Have you been <a href="elimcheck.cgi?t=$tourney">eliminated</a>?<br>
 
