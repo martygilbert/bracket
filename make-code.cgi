@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 require 'bracket.pl';
-my $tourney = $ARGV[0] || $currYear;
+my $tourney = $ARGV[0] || $currDefault;
 setup("$tourney/teams");
 
 use CGI qw/:standard/;

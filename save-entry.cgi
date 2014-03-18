@@ -5,7 +5,7 @@ require 'bracket.pl';
 use CGI qw/:standard/;
 $q = new CGI;
 
-my $tourney = $q->param('t') || $currYear;
+my $tourney = $q->param('t') || $currDefault;
 my $code = $q->param('c') || "0.0.0.0.0.0.0.0";
 my $name = $q->param('name') || 0;
 

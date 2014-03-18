@@ -7,7 +7,8 @@ $q = new CGI;
 print "Content-type: text/html\n\n";
 $|=1;
 
-my $tourney = $q->param('t') || $currYear;
+my $tourney = $q->param('t') || $currDefault;
+print $tourney;
 my $code = $q->param('c') || "0.0.0.0.0.0.0.0";
 
 my $expired = 0;
@@ -269,7 +270,7 @@ if(!$expired){
 print qq(
 <p>
 <a id="saveit" href="make-entry.cgi?t=$tourney&c=$code">Save</a> this page -
-<br />then bookmark it and finish it later</center></td>
+<br />bookmark it and finish later</center></td>
 );
 }
 
